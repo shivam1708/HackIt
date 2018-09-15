@@ -13,6 +13,7 @@ app.set('view engine','ejs');
 
 var total = 1000;
 var disabled = '';
+var flag = 1;
 
 var li = [];
 fs.readFile('one.cpp','utf8',function(err,data){
@@ -43,8 +44,9 @@ app.post('/',function(req,res){
         total = total - 50;
         res.render('pages/index',{list:li,total:total,disabled:disabled});
       }
-      else{
+      else if(flag == 1){
         total = total + 100;
+        flag = 0;
         disabled = 'disabled';
         res.render('pages/index',{list:li,total:total,disabled:disabled});
       }
