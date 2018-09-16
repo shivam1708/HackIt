@@ -22,7 +22,7 @@ fs.readFile('one.cpp','utf8',function(err,data){
   }
   else{
     li = data.split('\n');
-    console.log(li);
+    //console.log(li);
   }
 });
 
