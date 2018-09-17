@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body{
-            background:#0e2439;
+            background:#0f0f23;
         }
         #heading{
             color: aliceblue;
@@ -58,7 +58,7 @@
     </style>
 </head>
 
-<body>
+<body style="background-color: <%= bg %>">
     <div class="container">
         <h1 id="heading">Crackathon Round 1</h1>
         <h1 id="pshead">
@@ -88,7 +88,7 @@
                     <form class="col m12" action="http://127.0.0.1:8080/" method="post">
                         <div class="row">
                             <div class="input-field col m12">
-                                <textarea id="textarea1" class="materialize-textarea" name="input"></textarea>
+                                <textarea class="materialize-textarea" id="<%= disabled %>" name="input"></textarea>
                                 <label for="textarea1">Enter Testcase</label>
                             </div>
                         </div>
