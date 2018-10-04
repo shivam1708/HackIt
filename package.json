@@ -1,20 +1,25 @@
 {
-  "name": "round1",
+  "name": "HackIt",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivam1708/HackIt.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivam1708/HackIt/issues"
+  },
+  "homepage": "https://github.com/shivam1708/HackIt#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "cors": "^2.8.4",
     "ejs": "^2.6.1",
-    "express": "^4.16.3",
-    "file-system": "^2.2.2",
-    "nodemon": "^1.18.4",
-    "shelljs": "^0.8.2"
+    "express": "^4.16.3"
   }
 }
