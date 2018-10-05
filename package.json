@@ -11,6 +11,7 @@
     "url": "git+https://github.com/shivam1708/HackIt.git"
   },
   "keywords": [],
+  "start": "node app.js",
   "author": "",
   "license": "ISC",
   "bugs": {
