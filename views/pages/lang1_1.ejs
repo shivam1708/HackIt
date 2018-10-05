@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body{
+            background:#0e2439;
+        }
+        #heading{
+            color: aliceblue;
+            text-align: center;
+            font-family: 'Gamja Flower', cursive;
+            font-size: 50px;
+        }
+        #ps{
+            color: aliceblue;
+            font-family: 'Gamja Flower', cursive;
+            font-size: 40;
+        }
+        #chead{
+            color: aliceblue;
+            font-family: 'Gamja Flower', cursive;
+            font-size: 35px;           
+        }   
+        #code{
+            color: aliceblue;
+            font-size: 20px;
+        }
+        #pshead{
+            color: aliceblue;
+            font-family: 'Gamja Flower', cursive;
+            font-size:30px;
+            text-align: center;
+        }
+        #res{
+            text-align: center;
+        }
+        span{
+            font-size: 30px;
+        }
+        button{
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+        }
+        textarea{
+            color: aliceblue;
+        }
+        #constraints{
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading">Crackathon Round 1 <span style="float:right;"><a href="/lang1/2">Next</a></span> </h1>
+        <h1 id="pshead">
+            Problem Statement: There is a 12-hour clock(only hours no minutes and seconds).
+            You are given the current time(in hours) h and you have to tell the time after x
+            no of hours. The clock only displays 1 to 12.
+            <span></span>
+        </h1>
+        <p id="constraints"><span>Constraints</span>: 1<=h<=12,1<=x<=1000</p> <div class="row">
+                <div class="col m4 l4 container" id="code">
+                    <h1 id="chead">Code</h1>
+                    <pre>
+#include<iostream>
+using namespace std;
+int main()
+{
+    cin>>h>>x;
+    cout<<(h+x)%12;
+    return 0;
+}
+                </pre>
+                </div>
+                <div class="col m4 l4" id="res">
+                    <h1 id="chead">Score</h1>
+                    <a class="waves-effect waves-light btn-large">
+                        <%= total %></a>
+                </div>
+                <div class="col m4 l4" id="res">
+                    <h1 id="chead">Input</h1>
+                    <div class="row">
+                        <form class="col m12" action="/lang1/1" method="post">
+                            <div class="row">
+                                <div class="input-field col m12">
+                                    <textarea id="textarea1" class="materialize-textarea" name="input"></textarea>
+                                    <label for="textarea1">Enter Testcase</label>
+                                </div>
+                            </div>
+                            <button class="<%= disabled %> btn waves-effect waves-light" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+    </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        window.location.hash = "no-back-button";
+        window.location.hash = "Again-No-back-button"; //again because google chrome don't insert first hash into history
+        window.onhashchange = function () {
+            window.location.hash = "no-back-button";
+        }
+    </script>
+</body>
+
+</html>

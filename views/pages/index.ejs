@@ -11,48 +11,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        body{
-            background:#0e2439;
+        body {
+            background: #0e2439;
         }
-        #heading{
+
+        #heading {
             color: aliceblue;
             text-align: center;
             font-family: 'Gamja Flower', cursive;
             font-size: 50px;
         }
-        #ps{
+
+        #ps {
             color: aliceblue;
             font-family: 'Gamja Flower', cursive;
             font-size: 40;
         }
-        #chead{
+
+        #chead {
             color: aliceblue;
             font-family: 'Gamja Flower', cursive;
-            font-size: 35px;           
-        }   
-        #code{
+            font-size: 35px;
+        }
+
+        #code {
             color: aliceblue;
             font-size: 20px;
         }
-        #pshead{
+
+        #pshead {
             color: aliceblue;
             font-family: 'Gamja Flower', cursive;
-            font-size:45px;
+            font-size: 45px;
             text-align: center;
         }
-        #res{
+
+        #res {
             text-align: center;
         }
-        span{
+
+        span {
             font-size: 40px;
         }
-        button{
+
+        button {
             text-align: center;
         }
-        p{
+
+        p {
             font-size: 20px;
         }
-        textarea{
+
+        textarea {
             color: aliceblue;
         }
     </style>
@@ -61,47 +71,33 @@
 <body>
     <div class="container">
         <h1 id="heading">Crackathon Round 1</h1>
-        <h1 id="pshead">
-            Problem Statement: <span> Given an integer n print the cube of a number</span>
-        </h1>
-        <div class="row">
-            <div class="col m4 l4 container" id="code">
-                <code>
-                    <h1 id="chead">Code</h1>
-                    <ul>
-                        <% list.forEach(function(l) { %>
-                        <li>
-                            <%= l %>
-                        </li>
-                        <% }); %>
-                    </ul>
-                </code>
+    </div>
+    <div class="row">
+        <div class="col m4 l4">
+            <div style="text-align:center;">
+                <a href="/lang1/1">C</a>
             </div>
-            <div class="col m4 l4" id="res">
-                <h1 id="chead">Score</h1>
-                <a class="waves-effect waves-light btn-large">
-                    <%= total %></a>
+        </div>
+        <div class="col m4 l4">
+            <div style="text-align:center;">
+                <a href="/lang2/1">Python</a>
             </div>
-            <div class="col m4 l4" id="res">
-                <h1 id="chead">Input</h1>
-                <div class="row">
-                    <form class="col m12" action="/" method="post">
-                        <div class="row">
-                            <div class="input-field col m12">
-                                <textarea id="textarea1" class="materialize-textarea" name="input"></textarea>
-                                <label for="textarea1">Enter Testcase</label>
-                            </div>
-                        </div>
-                        <button class="<%= disabled %> btn waves-effect waves-light" type="submit" name="action">Submit
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </form>
-                </div>
+        </div>
+        <div class="col m4 l4">
+            <div style="text-align:center;">
+                <a href="/lang3/1">Java</a>
             </div>
         </div>
     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        window.location.hash = "no-back-button";
+        window.location.hash = "Again-No-back-button"; //again because google chrome don't insert first hash into history
+        window.onhashchange = function () {
+            window.location.hash = "no-back-button";
+        }
+    </script>
 </body>
 
 </html>
