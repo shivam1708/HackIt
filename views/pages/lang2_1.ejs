@@ -37,14 +37,14 @@
         #pshead{
             color: aliceblue;
             font-family: 'Gamja Flower', cursive;
-            font-size:45px;
+            font-size:30px;
             text-align: center;
         }
         #res{
             text-align: center;
         }
         span{
-            font-size: 40px;
+            font-size: 30px;
         }
         button{
             text-align: center;
@@ -55,28 +55,51 @@
         textarea{
             color: aliceblue;
         }
+        #constraints{
+            color: aliceblue;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1 id="heading">Crackathon Round 1</h1>
-    </div>
-    <div class="row">
-        <div class="col m4 l4">
-            <div style="text-align:center;">
-                <a href="http://127.0.0.1:8080/lang1/1">C</a>
+        <h1 id="heading">Crackathon Round 1 <span style="float:right;"><a href="/lang1/2">Next</a></span> </h1>
+        <h1 id="pshead">
+            Problem Statement: There is a 12-hour clock(only hours no minutes and seconds).
+            You are given the current time(in hours) h and you have to tell the time after x 
+            no of hours. The clock only displays 1 to 12.
+            <span></span>
+        </h1>
+        <p id="constraints"><span>Constraints</span>: 1<=h<=12,1<=x<=1000</p>
+        <div class="row">
+            <div class="col m4 l4 container" id="code">
+                <h1 id="chead">Code</h1>
+                <pre>
+h,x = map(int,input().split())
+print((h+x)%12)
+                </pre>
             </div>
-        </div>
-        <div class="col m4 l4">
-            <div style="text-align:center;">
-                <a href="http://127.0.0.1:8080/lang2/1">Python</a>
-            </div>            
-        </div>
-        <div class="col m4 l4">
-            <div style="text-align:center;">
-                <a href="http://127.0.0.1:8080/lang3/1">Java</a>
-            </div>            
+            <div class="col m4 l4" id="res">
+                <h1 id="chead">Score</h1>
+                <a class="waves-effect waves-light btn-large">
+                    <%= total %></a>
+            </div>
+            <div class="col m4 l4" id="res">
+                <h1 id="chead">Input</h1>
+                <div class="row">
+                    <form class="col m12" action="http://127.0.0.1:8080/lang1/1" method="post">
+                        <div class="row">
+                            <div class="input-field col m12">
+                                <textarea id="textarea1" class="materialize-textarea" name="input"></textarea>
+                                <label for="textarea1">Enter Testcase</label>
+                            </div>
+                        </div>
+                        <button class="<%= disabled %> btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Compiled and minified JavaScript -->
@@ -87,4 +110,5 @@
             window.onhashchange=function(){window.location.hash="no-back-button";}
             </script> 
 </body>
+
 </html>
