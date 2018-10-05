@@ -66,15 +66,14 @@
         <h1 id="heading">Crackathon Round 1 <span style="float:right;"><a href="/lang2/2">Next</a></span> </h1>
         <h1 id="pshead">
             Problem Statement: There is a 12-hour clock(only hours no minutes and seconds).
-            You are given the current time(in hours) h and you have to tell the time after x 
+            You are given the current time(in hours) h and you have to tell the time after x
             no of hours. The clock only displays 1 to 12.
             <span></span>
         </h1>
-        <p id="constraints"><span>Constraints</span>: 1<=h<=12,1<=x<=1000</p>
-        <div class="row">
-            <div class="col m4 l4 container" id="code">
-                <h1 id="chead">Code</h1>
-                <pre>
+        <p id="constraints"><span>Constraints</span>: 1<=h<=12,1<=x<=1000</p> <div class="row">
+                <div class="col m4 l4 container" id="code">
+                    <h1 id="chead">Code</h1>
+                    <pre>
 h,x = map(int,input().split())
 print((h+x)%12)
                 </pre>
@@ -93,22 +92,23 @@ print((h+x)%12)
                                 <textarea id="textarea1" class="materialize-textarea" name="input"></textarea>
                                 <label for="textarea1">Enter Testcase</label>
                             </div>
-                        </div>
-                        <button class="<%= disabled %> btn waves-effect waves-light" type="submit" name="action">Submit
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </form>
+                            <button class="<%= disabled %> btn waves-effect waves-light" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </div>
+    </div>
     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-            window.location.hash="no-back-button";
-            window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
-            window.onhashchange=function(){window.location.hash="no-back-button";}
-            </script> 
+        window.location.hash = "no-back-button";
+        window.location.hash = "Again-No-back-button"; //again because google chrome don't insert first hash into history
+        window.onhashchange = function () {
+            window.location.hash = "no-back-button";
+        }
+    </script>
 </body>
 
 </html>

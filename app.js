@@ -14,7 +14,6 @@ var flag = 1;
 var disabled2 = '';
 var flag2 = 1;
 
-//var li = ['code here'];
 app.get('/',(req,res) => {
   res.render('pages/index',{total:total,disabled:disabled});
 });
@@ -103,7 +102,6 @@ app.get('/lang2/1',function(req, res){
 app.post('/lang2/1',function(req,res){
 var user_input = req.body.input;
 var li = user_input.split(' ');
-//console.log(li);
 var hour = parseInt(li[0],10);
 var inc = parseInt(li[1],10);
 wrong = (hour+inc)%12;
@@ -131,7 +129,6 @@ app.get('/lang2/2',function(req, res){
 
 app.post('/lang2/2',function(req,res){
 var user_input = req.body.input;
-//console.log(li);
 var m = parseInt(user_input);
 if(m<=7)
 {
@@ -250,4 +247,6 @@ else if(flag2 == 1){
 }
 });
 
-app.listen(8080, () => console.log(`Express server running on port 8080`));
+var port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Express server running on port Port ENV.`));

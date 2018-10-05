@@ -11,48 +11,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        body{
-            background:#0e2439;
+        body {
+            background: #0e2439;
         }
-        #heading{
+
+        #heading {
             color: aliceblue;
             text-align: center;
             font-family: 'Gamja Flower', cursive;
             font-size: 50px;
         }
-        #ps{
+
+        #ps {
             color: aliceblue;
             font-family: 'Gamja Flower', cursive;
             font-size: 40;
         }
-        #chead{
+
+        #chead {
             color: aliceblue;
             font-family: 'Gamja Flower', cursive;
-            font-size: 35px;           
-        }   
-        #code{
+            font-size: 35px;
+        }
+
+        #code {
             color: aliceblue;
             font-size: 20px;
         }
-        #pshead{
+
+        #pshead {
             color: aliceblue;
             font-family: 'Gamja Flower', cursive;
-            font-size:45px;
+            font-size: 45px;
             text-align: center;
         }
-        #res{
+
+        #res {
             text-align: center;
         }
-        span{
+
+        span {
             font-size: 40px;
         }
-        button{
+
+        button {
             text-align: center;
         }
-        p{
+
+        p {
             font-size: 20px;
         }
-        textarea{
+
+        textarea {
             color: aliceblue;
         }
     </style>
@@ -65,26 +75,29 @@
     <div class="row">
         <div class="col m4 l4">
             <div style="text-align:center;">
-                <a href="http://127.0.0.1:8080/lang1/1">C</a>
+                <a href="/lang1/1">C</a>
             </div>
         </div>
         <div class="col m4 l4">
             <div style="text-align:center;">
-                <a href="http://127.0.0.1:8080/lang2/1">Python</a>
-            </div>            
+                <a href="/lang2/1">Python</a>
+            </div>
         </div>
         <div class="col m4 l4">
             <div style="text-align:center;">
-                <a href="http://127.0.0.1:8080/lang3/1">Java</a>
-            </div>            
+                <a href="/lang3/1">Java</a>
+            </div>
         </div>
     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-            window.location.hash="no-back-button";
-            window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
-            window.onhashchange=function(){window.location.hash="no-back-button";}
-            </script> 
+        window.location.hash = "no-back-button";
+        window.location.hash = "Again-No-back-button"; //again because google chrome don't insert first hash into history
+        window.onhashchange = function () {
+            window.location.hash = "no-back-button";
+        }
+    </script>
 </body>
+
 </html>
